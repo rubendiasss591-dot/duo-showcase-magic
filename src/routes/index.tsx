@@ -243,7 +243,7 @@ function Index() {
 
           <div className="mt-12 sm:mt-16" aria-roledescription="carrossel" aria-label="Fotos enviadas por clientes">
             <div className="relative mx-auto max-w-md overflow-hidden rounded-lg bg-product">
-              <img key={customerSlide} src={customerPhotos[customerSlide].image} alt={customerPhotos[customerSlide].alt} className="animate-carousel-fade aspect-[3/4] w-full object-cover" loading="lazy" />
+              <img key={customerSlide} src={(customerPhotos[customerSlide] ?? customerPhotos[0]).image} alt={(customerPhotos[customerSlide] ?? customerPhotos[0]).alt} className="animate-carousel-fade aspect-[3/4] w-full object-cover" loading="lazy" />
               <Button variant="ghost" size="icon" className="absolute left-2 top-1/2 -translate-y-1/2 bg-surface/90 shadow-sm" onClick={() => setCustomerSlide((current) => (current - 1 + customerPhotos.length) % customerPhotos.length)} aria-label="Foto anterior"><ChevronLeft /></Button>
               <Button variant="ghost" size="icon" className="absolute right-2 top-1/2 -translate-y-1/2 bg-surface/90 shadow-sm" onClick={() => setCustomerSlide((current) => (current + 1) % customerPhotos.length)} aria-label="Próxima foto"><ChevronRight /></Button>
             </div>
