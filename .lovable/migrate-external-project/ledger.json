@@ -5,15 +5,15 @@
       "capability": "Storefront code and interaction",
       "source": "src/routes/index.tsx and src/styles.css",
       "outcome": "migrate",
-      "status": "implemented",
-      "next_action": "Verify in preview"
+      "status": "verified",
+      "next_action": "None"
     },
     {
       "capability": "Product images and videos",
       "source": "22 asset pointers",
       "outcome": "migrate",
-      "status": "implemented",
-      "next_action": "Verify in preview"
+      "status": "verified",
+      "next_action": "None"
     },
     {
       "capability": "Payments",
@@ -61,8 +61,8 @@
       "capability": "Verification",
       "source": "Preview",
       "outcome": "migrate",
-      "status": "pending",
-      "next_action": "Exercise selection and inspect mobile and desktop"
+      "status": "verified",
+      "next_action": "None"
     }
   ]
 }
