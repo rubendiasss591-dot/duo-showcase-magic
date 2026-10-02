@@ -19,6 +19,8 @@
  */
 
 @theme inline {
+  --font-sans: "Manrope", sans-serif;
+  --font-display: "Manrope", sans-serif;
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
   --radius-lg: var(--radius);
@@ -59,29 +61,79 @@
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-ring: var(--sidebar-ring);
+  --color-surface: var(--surface);
+  --color-section: var(--section);
+  --color-brand: var(--brand);
+  --color-brand-foreground: var(--brand-foreground);
+  --color-banner: var(--banner);
+  --color-banner-foreground: var(--banner-foreground);
+  --color-offer: var(--offer);
+  --color-offer-foreground: var(--offer-foreground);
+  --color-offer-border: var(--offer-border);
+  --color-urgency: var(--urgency);
+  --color-urgency-foreground: var(--urgency-foreground);
+  --color-discount: var(--discount);
+  --color-discount-foreground: var(--discount-foreground);
+  --color-price: var(--price);
+  --color-rating: var(--rating);
+  --color-selection: var(--selection);
+  --color-selection-foreground: var(--selection-foreground);
+  --color-product: var(--product);
+  --color-footer: var(--footer);
+  --color-footer-foreground: var(--footer-foreground);
+  --color-bottle-white: var(--bottle-white);
+  --color-bottle-pink: var(--bottle-pink);
+  --color-bottle-black: var(--bottle-black);
+  --color-bottle-blue: var(--bottle-blue);
+  --shadow-action: 0 8px 22px color-mix(in oklab, var(--primary) 22%, transparent);
+  --shadow-sticky: 0 -8px 28px color-mix(in oklab, var(--foreground) 12%, transparent);
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.45rem;
+  --background: oklch(0.985 0.006 89);
+  --foreground: oklch(0.17 0.025 154);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
   --popover-foreground: oklch(0.129 0.042 264.695);
-  --primary: oklch(0.208 0.042 265.755);
-  --primary-foreground: oklch(0.984 0.003 247.858);
+  --primary: oklch(0.52 0.18 142);
+  --primary-foreground: oklch(0.99 0 0);
   --secondary: oklch(0.968 0.007 247.896);
   --secondary-foreground: oklch(0.208 0.042 265.755);
-  --muted: oklch(0.968 0.007 247.896);
-  --muted-foreground: oklch(0.554 0.046 257.417);
-  --accent: oklch(0.968 0.007 247.896);
-  --accent-foreground: oklch(0.208 0.042 265.755);
+  --muted: oklch(0.95 0.008 90);
+  --muted-foreground: oklch(0.52 0.02 145);
+  --accent: oklch(0.95 0.035 145);
+  --accent-foreground: oklch(0.3 0.08 145);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.984 0.003 247.858);
-  --border: oklch(0.929 0.013 255.508);
-  --input: oklch(0.929 0.013 255.508);
-  --ring: oklch(0.704 0.04 256.788);
+  --border: oklch(0.88 0.012 94);
+  --input: oklch(0.88 0.012 94);
+  --ring: oklch(0.52 0.18 142);
+  --surface: oklch(1 0 0);
+  --section: oklch(0.965 0.012 91);
+  --brand: oklch(0.29 0.08 154);
+  --brand-foreground: oklch(0.99 0 0);
+  --banner: oklch(0.3 0.11 241);
+  --banner-foreground: oklch(0.99 0 0);
+  --offer: oklch(0.84 0.17 87);
+  --offer-foreground: oklch(0.25 0.05 74);
+  --offer-border: oklch(0.64 0.15 76);
+  --urgency: oklch(0.56 0.22 25);
+  --urgency-foreground: oklch(0.99 0 0);
+  --discount: oklch(0.89 0.07 151);
+  --discount-foreground: oklch(0.3 0.09 151);
+  --price: oklch(0.48 0.17 142);
+  --rating: oklch(0.72 0.18 57);
+  --selection: oklch(0.9 0.07 151);
+  --selection-foreground: oklch(0.28 0.09 151);
+  --product: oklch(0.91 0.006 250);
+  --footer: oklch(0.16 0.025 154);
+  --footer-foreground: oklch(0.8 0.015 145);
+  --bottle-white: oklch(0.97 0 0);
+  --bottle-pink: oklch(0.8 0.09 10);
+  --bottle-black: oklch(0.2 0 0);
+  --bottle-blue: oklch(0.79 0.08 230);
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -140,5 +192,90 @@
   body {
     background-color: var(--color-background);
     color: var(--color-foreground);
+    font-family: var(--font-sans);
+    letter-spacing: 0;
+  }
+}
+
+@utility section-kicker {
+  color: var(--brand);
+  font-size: 0.75rem;
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  text-align: center;
+}
+
+@utility section-title {
+  margin-top: 0.5rem;
+  font-family: var(--font-display);
+  font-size: 2rem;
+  line-height: 1.15;
+  font-weight: 900;
+  text-align: center;
+}
+
+@keyframes buy-pulse {
+  0%, 100% { transform: scale(1); box-shadow: var(--shadow-action); }
+  50% { transform: scale(1.025); box-shadow: 0 10px 30px color-mix(in oklab, var(--primary) 38%, transparent); }
+}
+
+@keyframes offer-pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.012); }
+}
+
+@keyframes urgency-pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.78; }
+}
+
+@keyframes slide-in-up {
+  from { opacity: 0; transform: translateY(100%); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes carousel-fade {
+  from { opacity: 0.35; transform: scale(1.015); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@utility animate-buy-pulse {
+  animation: buy-pulse 1.35s ease-in-out infinite;
+}
+
+@utility animate-offer-pulse {
+  animation: offer-pulse 1.7s ease-in-out infinite;
+}
+
+@utility animate-urgency-pulse {
+  animation: urgency-pulse 1.15s ease-in-out infinite;
+}
+
+@utility animate-slide-in-up {
+  animation: slide-in-up 0.28s ease-out;
+}
+
+@utility animate-carousel-fade {
+  animation: carousel-fade 0.45s ease-out;
+}
+
+@utility timer-number {
+  display: inline-flex;
+  min-width: 1.75rem;
+  height: 1.6rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--radius-sm);
+  background-color: color-mix(in oklab, var(--banner-foreground) 18%, transparent);
+  font-variant-numeric: tabular-nums;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
   }
 }
