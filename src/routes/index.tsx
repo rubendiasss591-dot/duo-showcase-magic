@@ -163,8 +163,8 @@ function Index() {
         <a href="#oferta" className="font-display text-xl font-bold tracking-[0.38em] text-brand" aria-label="Início">THERMO</a>
       </header>
 
-      <section id="oferta" className="mx-auto grid max-w-6xl gap-7 px-4 py-7 sm:px-5 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:py-14">
-        <div className="lg:sticky lg:top-5 lg:self-start">
+      <section id="oferta" className="mx-auto grid max-w-6xl grid-cols-1 gap-7 px-4 py-7 sm:px-5 sm:py-10 lg:grid-cols-[1.02fr_0.98fr] lg:gap-14 lg:py-14">
+        <div className="min-w-0 lg:sticky lg:top-5 lg:self-start">
           <div className="relative overflow-hidden rounded-lg border border-border bg-product">
             <span className="absolute left-4 top-4 z-10 rounded-md bg-offer px-3 py-2 text-xs font-black uppercase text-offer-foreground">Kit com 2 peças</span>
             <img src={featuredImage} alt={featuredAlt} className="aspect-square w-full object-cover transition-opacity duration-300" />
@@ -194,7 +194,7 @@ function Index() {
           </div>
         </div>
 
-        <div>
+        <div className="min-w-0">
           <div className="flex items-center gap-2 text-sm"><span className="flex text-rating" aria-label="5 estrelas">{[1,2,3,4,5].map((n) => <Star key={n} className="size-4 fill-current" />)}</span><strong>4,9</strong><span className="text-muted-foreground">(327 avaliações)</span></div>
           <p className="mt-5 text-xs font-black uppercase tracking-[0.18em] text-brand">Oferta exclusiva por tempo limitado</p>
           <h1 className="mt-4 font-display text-3xl font-black leading-[1.06] sm:text-5xl">Kit Garrafas Térmicas 1,2 L <span className="block text-brand">[COMPRE 1, LEVE 2]</span></h1>
