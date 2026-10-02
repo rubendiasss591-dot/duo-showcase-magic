@@ -1,0 +1,14 @@
+{
+  "source": "https://github.com/rafaelbenevidestargino-pixel/thermos-duo-showcase/",
+  "capabilities": [
+    {"capability":"Storefront code and interaction","source":"src/routes/index.tsx and src/styles.css","outcome":"migrate","status":"pending","next_action":"Copy and verify"},
+    {"capability":"Product images and videos","source":"22 asset pointers","outcome":"migrate","status":"pending","next_action":"Transfer original media and verify"},
+    {"capability":"Payments","source":"Purchase button only confirms selection; no checkout provider present","outcome":"preserve","status":"source_not_implemented","next_action":"None; clearly disclose purchase does not charge"},
+    {"capability":"Schema and records","source":"No database or exported records in repository","outcome":"not_applicable","status":"verified","next_action":"None"},
+    {"capability":"Authentication and authorization","source":"No auth in repository","outcome":"not_applicable","status":"verified","next_action":"None"},
+    {"capability":"External providers, public endpoints, callbacks, webhooks and schedules","source":"No implementations in repository","outcome":"not_applicable","status":"verified","next_action":"None"},
+    {"capability":"Secrets","source":"No required variable names found","outcome":"not_applicable","status":"verified","next_action":"None"},
+    {"capability":"Cutover","source":"No production integrations or domain in repository","outcome":"not_applicable","status":"verified","next_action":"None"},
+    {"capability":"Verification","source":"Preview","outcome":"migrate","status":"pending","next_action":"Exercise selection and inspect mobile and desktop"}
+  ]
+}
